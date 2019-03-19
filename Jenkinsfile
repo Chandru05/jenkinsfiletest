@@ -1,11 +1,11 @@
 pipeline{
     agent { 
-    	docker { image 'node:7-alpine'}
+    	docker { image 'maven:3.3.3'}
     	}
     stages{
         stage('Test'){
             steps {
-                powershell 'node --version'
+                sh 'mvn --version'
             }
         }
     }
