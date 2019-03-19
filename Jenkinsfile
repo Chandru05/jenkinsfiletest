@@ -1,9 +1,10 @@
 pipeline{
     agent none
     stages{
-        stage('build'){
+        stage('test'){
             steps {
-                echo "hello"
+                mvn --version
+                node --version
             }
         }
     }
