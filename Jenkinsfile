@@ -5,7 +5,7 @@ pipeline{
     stages{
         stage('Test'){
             steps {
-                'node --version'
+                sh 'node --version'
             }
         }
     }
