@@ -1,9 +1,11 @@
-pipeline{
-    agent none
-    stages{
-        stage('Test'){
+pipeline {
+    agent {
+        docker { image 'node:7-alpine' }
+    }
+    stages {
+        stage('Test') {
             steps {
-                sh 'mvn --version'
+                sh 'node --version'
             }
         }
     }
