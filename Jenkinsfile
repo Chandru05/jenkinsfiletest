@@ -3,8 +3,8 @@ pipeline{
     stages{
         stage('test'){
             steps {
-                cmd 'mvn --version'
-                cmd 'node --version'
+                powershell 'mvn --version'
+                powershell 'node --version'
             }
         }
     }
