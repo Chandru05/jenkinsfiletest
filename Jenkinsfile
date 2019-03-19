@@ -4,7 +4,6 @@ pipeline{
         stage('test'){
             steps {
                 powershell 'mvn --version'
-                powershell 'node --version'
             }
         }
     }
